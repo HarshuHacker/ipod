@@ -1,0 +1,55 @@
+/* information leaf on top left */
+
+.information-container{
+    position: fixed;
+    z-index: 2;
+    transition: all 0.8s ease-in-out;
+}
+
+.info-div{
+    border: 5px solid black;
+    border-radius: 20px;
+    line-height: 30px;
+    font-size: 20px;
+    width: 350px;
+    max-height: 712px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    overflow: scroll;
+}
+
+ul,ol{
+    margin: 0;
+}
+
+li
+{
+    margin: 5px;
+}
+
+ul
+{
+    padding: 0;
+}
+
+li a
+{
+    text-decoration: none;
+    color: black;
+}
+
+#info-btn{
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
+    padding: 4px 10px;
+    /* box-sizing: border-box; */
+    /* margin-left: 90px; */
+}
+
+#info-btn:hover{
+    background-color: rgb(181, 181, 181);
+}
