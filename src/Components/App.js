@@ -53,7 +53,7 @@ class App extends React.Component
       // 8 : Themes
       // 9 : Wheel Colour
       // 10 : WallPaper
-      lengthMenuKey: {"-1":3,1:2,3:2,4:2,8:4,9:3,10:2},
+      lengthMenuKey: {"-1":3,1:2,3:2,4:5,8:4,9:3,10:2},
       menuMapping: {"-1":[0,1,2,3], 1:[4,5,6], 3:[8,9,10]},
       currentMenu: -2,
       navigationStack: [],
