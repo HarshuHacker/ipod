@@ -31,11 +31,11 @@ class knowMore extends React.Component
         let cssProp;
         if(divOpen===false)
         {
-            cssProp = {top: "-745px"}
+            cssProp = {top: "-700px"}
         }
         else
         {
-            cssProp = {top: "10px"}
+            cssProp = {top: "55px"}
         }
         return (
             <div className="information-container" style={cssProp}>
@@ -97,7 +97,7 @@ class knowMore extends React.Component
                 <button 
                     id="info-btn" 
                     onClick={this.openDiv}>
-                        Know More <i className={arrow}></i>
+                        How To Use <i className={arrow}></i>
                 </button>
             </div>
         )
