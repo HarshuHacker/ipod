@@ -40,16 +40,22 @@ class Playing extends React.Component {
                     <img src={songImgUrl} alt="songImg"></img>
                     <div>
                         <h1>{songItems[songIndex]}</h1>
-                        {playing && <h5 className="play-pause-nav">Playing</h5>}
-                        {!playing && <h5 className="play-pause-nav">Paused</h5>}
+                        {/* {playing && <h5 className="play-pause-nav">Playing</h5>}
+                        {!playing && <h5 className="play-pause-nav">Paused</h5>} */}
                     </div>
                 </div>
                 <div className="status">
-                    {currentTimeRender}
-                    <div id="progress">
-                        <div style={percentageComplete} id="progress-bar"></div>
+                    <div id='currentTimeRender'>
+                        {currentTimeRender}
                     </div>
-                    {durationRender}
+                    <div id="progress">
+                        <div style={percentageComplete} id="progress-bar">
+                            <div id="progress-circle"></div>
+                        </div>
+                    </div>
+                    <div id='durationRender'>
+                        {durationRender}
+                    </div>
                 </div>
             </div>
         )

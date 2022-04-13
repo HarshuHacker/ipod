@@ -1,7 +1,30 @@
-.dispaly{
+.display
+{
+    /* background-image: url("../Images/BananzaThumb.jpg"); */
+    background-color: antiquewhite;
     height: 330px;
     width: 330px;
-    background-color: aliceblue;
     margin-top: 25px;
     border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.blank-div
+{
+    height: 330px;
+    width: 330px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.empty-text{
+    text-align: center;
+    color: black;
 }

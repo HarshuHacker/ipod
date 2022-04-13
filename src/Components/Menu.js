@@ -14,7 +14,7 @@ class Menu extends React.Component {
                 <div className="menu">
                     <ul>
                         {menuItems.map((element, index)=>{
-                            return active===index?<li key={index} className="active">&nbsp;{element}</li>:<li key={index}>&nbsp;{element}</li>
+                            return active===index?<li key={index} className="active">{element}</li>:<li key={index}>{element}</li>
                         })}
                     </ul>
                 </div>

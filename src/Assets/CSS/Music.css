@@ -1,11 +1,12 @@
 /* music container */
 .music{
-    width: 270px;
-    height: 210px;
+    width: 331px;
+    height: 300px;
     background-color: #E3F2FD;
+    overflow: visible;
 }
 
 /* heading for music */
 h2{
-    margin: 2px;
+    /* margin: 2px; */
 }

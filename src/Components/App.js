@@ -23,8 +23,11 @@ import song6Img from "../Assets/Images/RanjhaThumb.jpeg"
 
 
 import blueBg from "../Assets/Images/blueBG.jpeg"
-import grayBG from "../Assets/Images/grayBG.jpeg"
+import SpaceGrayBG from "../Assets/Images/SpaceGrayBG.jpeg"
+import roseGoldBG from "../Assets/Images/roseGoldBG.jpeg"
+import greenBG from "../Assets/Images/greenBG.jpeg"
 import pinkBg from "../Assets/Images/pinkBG.jpeg"
+
 
 
 class App extends React.Component 
@@ -59,8 +62,8 @@ class App extends React.Component
       navigationStack: [],
       songUrl: song1,
       playing: false,
-      theme: 'URL("https://media.istockphoto.com/photos/blue-textured-background-picture-id1169630303?k=20&m=1169630303&s=612x612&w=0&h=Y7t-JqwJ69HP4L1lCu7dUAa0GV6GafQosWto7BrT_mc=")',
-      wallpaperItems: [blueBg, grayBG, pinkBg],
+      theme: [blueBg, SpaceGrayBG, roseGoldBG, greenBG, pinkBg],
+      wallpaperItems: [song1Img, song2Img, song3Img],
       wallpaper: 0,
       audio: new Audio(song1),
       songImgUrl: song1Img,
@@ -162,7 +165,6 @@ class App extends React.Component
 
   togglePlayPause = () => 
   {
-    console.log("PP")
     if (this.state.currentMenu === -2) 
     {
       return;
@@ -181,10 +183,11 @@ class App extends React.Component
 
   updateActiveMenu = (direction, menu) => 
   {
-    if (menu !== -1 && menu !== 1 && menu !== 4 && menu !== 8 && menu !== 3 && menu !== 9 && menu !== 10) 
+    if (menu !== -1 && menu !== 1 && menu !== 3 && menu !== 4 && menu !== 8  && menu !== 9 && menu !== 10) 
     {
       return;
     }
+    
     let min = 0;
     let max = 0;
 
@@ -223,19 +226,22 @@ class App extends React.Component
   setTheme = (id) => {
     let theme ="";
     if (id === 0) {
-      theme= "#FDDCD7";
+      theme= this.state.theme[0];
     }
     else if (id === 1) {
-      theme= "rgb(210, 210, 210)"
+      theme= this.state.theme[1]
     } else if (id === 2) {
-      theme= "#F5DDC5";
+      theme= this.state.theme[2];
     } else if (id === 3) {
-      theme="#D1CDDA";
+      theme=this.state.theme[3];
       
     } else if (id === 4) {
-      theme="black"
+      theme=this.state.theme[4]
     }
-    this.setState({ theme:theme , noty:true, notifyText:"Theme Changed"})
+    this.setState({ 
+      theme:theme , 
+      noty:true, 
+      notifyText:"Theme Changed"})
     return;
   }
 
@@ -253,7 +259,11 @@ class App extends React.Component
     } else if (id === 3) {
       wheelColor= "#3D5AFE";
     }
-    this.setState({ wheelColor: wheelColor, noty:true, notifyText:"Wheel Color Changed"})
+    this.setState({ 
+      wheelColor: wheelColor, 
+      noty:true, 
+      notifyText:"Wheel Color Changed"
+    })
     return;
   }
 
@@ -283,7 +293,11 @@ class App extends React.Component
     }
     else {
       const prevId = navigationStack.pop();
-      this.setState({ currentMenu: prevId, navigationStack: navigationStack, active: 0 });
+      this.setState({ 
+        currentMenu: prevId, 
+        navigationStack: navigationStack, 
+        active: 0 
+      });
       return;
     }
 

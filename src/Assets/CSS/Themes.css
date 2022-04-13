@@ -1,4 +1,5 @@
 /* list element in themes */
 .theme-li{
-    padding: 2px 2px;
+    padding-top: 10px;
+    height: 40px;
 }

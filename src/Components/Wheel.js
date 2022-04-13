@@ -44,8 +44,6 @@ class Wheel extends React.Component {
     {
         const { updateActiveMenu, currentMenu } = this.props;
 
-        console.log(e.detail.distanceFromOrigin)
-        console.log("Hi")
         if (e.detail.distanceFromOrigin === 0) 
         {
             this.angle = e.detail.angle;
