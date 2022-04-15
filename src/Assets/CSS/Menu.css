@@ -13,7 +13,6 @@
 /* container for Leaf images in menu */
 .leaf{
     border-left: 4px solid black;
-    /* background-color: #E3F2FD; */
     background-color: white;
     height: 290px;
     width: 163px;

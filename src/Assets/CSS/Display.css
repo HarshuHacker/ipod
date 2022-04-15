@@ -1,6 +1,6 @@
+/* the complete display */
 .display
 {
-    /* background-color: antiquewhite; */
     background-color: white;
     height: 330px;
     width: 330px;
@@ -17,6 +17,7 @@
     position: relative;
 }
 
+/* for the menu with no objective */
 .blank-div
 {
     padding: 10px;
@@ -26,6 +27,7 @@
     text-align: center;
 }
 
+/* the texts inside blank div */
 .empty-text{
     text-align: center;
     color: black;

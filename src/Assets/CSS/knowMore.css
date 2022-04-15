@@ -1,11 +1,11 @@
-/* information leaf on top left */
-
+/* the div containing the info and the button */
 .information-container{
     position: absolute;
     z-index: 2;
     transition: all 0.8s ease-in-out;
 }
 
+/* the div containing info */
 .info-div{
     color: white;
     border: 5px solid black;
@@ -46,6 +46,7 @@ li a
     color: white;
 }
 
+/* div for the button */
 #info-btn{
     margin-top: 10px;
     border: none;
@@ -54,10 +55,9 @@ li a
     text-align: center;
     font-size: 25px;
     padding: 4px 10px;
-    /* box-sizing: border-box; */
-    /* margin-left: 90px; */
 }
 
+/* button on hover */
 #info-btn:hover{
     background-color: rgb(181, 181, 181);
 }

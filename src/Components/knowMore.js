@@ -14,11 +14,13 @@ class knowMore extends React.Component
 
     openDiv=()=>
     {
+        // if div is closed
         if(this.state.divOpen===true)
         {
             this.setState({divOpen:false})
             this.setState({arrow:"fa-solid fa-angle-down"})
         }
+        // if div is open
         else
         {
             this.setState({divOpen:true})
@@ -29,10 +31,12 @@ class knowMore extends React.Component
     {
         const {divOpen,arrow} = this.state;
         let cssProp;
+        // if the div is closed
         if(divOpen===false)
         {
             cssProp = {top: "-700px"}
         }
+        // if the div is open
         else
         {
             cssProp = {top: "55px"}
@@ -94,6 +98,7 @@ class knowMore extends React.Component
 
                 </div>
 
+                {/* button for opening and closing the div */}
                 <button 
                     id="info-btn" 
                     onClick={this.openDiv}>

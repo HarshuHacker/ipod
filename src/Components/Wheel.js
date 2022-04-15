@@ -8,6 +8,7 @@ class Wheel extends React.Component {
         this.angle = 0;
     }
 
+    // Render wheel
     render()
     {
         const { changeMenuForward, active, currentMenu, theme, wheelColor } = this.props;
@@ -24,31 +25,34 @@ class Wheel extends React.Component {
             <div className="wheel-container" id="wheel-container">
                 <div style={{backgroundColor:wheelColor}} className="wheel" id="wheel">
 
+                    {/* for the menu button */}
                     <div className="controls" id="menu-button">
                         <i className="fa-solid fa-bars" style={{color:buttonColor}} ></i>
                     </div>
-
+                    {/* for the forward button */}
                     <div className="controls" id="forward-button">
                         <i className="fa-solid fa-forward" style={{color:buttonColor}}></i>
                     </div>
-
+                    {/* for the backward button */}
                     <div className="controls" id="backward-button">
                         <i className="fa-solid fa-backward" style={{color:buttonColor}}></i>
                     </div>
-
+                    {/* for the play/pause button */}
                     <div className="controls" id="play-pause-button">
                         <i className="fa-solid fa-play" style={{color:buttonColor}}></i>
                         <i className="fa-solid fa-pause" style={{color:buttonColor}}></i>
                     </div>
 
                 </div>
+                {/* for the center button */}
                 <div id="select-button" style={{background:`url(${theme})`}} className="blank" onClick={() => { changeMenuForward(active, currentMenu) }}></div>
             </div>
         )
     }
 
     
-
+    // function to control the changes from the wheel
+    // control the wheel roatation action if rotation is more than 15 degrees and also check direction of rotation
     wheelControll = (e) => 
     {
         const { updateActiveMenu, currentMenu } = this.props;
@@ -93,6 +97,7 @@ class Wheel extends React.Component {
         }
     }
 
+    // Bind components with zingtouch logic
     componentDidMount() 
     {
         const 

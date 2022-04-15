@@ -3,6 +3,7 @@ import "../Assets/CSS/Case.css"
 import Wheel from "./Wheel";
 import Display from "./Display";
 
+// This component is the outer case of iPod it does nothing special just renders display and wheel component
 class Case extends React.Component{
     render() {
         const {
@@ -35,6 +36,7 @@ class Case extends React.Component{
             <div className="case-container">
                 <div style={{background:`url(${theme})`,backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="case">
 
+                    {/* For the display part */}
                     <Display 
                         songIndex={songIndex} 
                         playing={playing} 
@@ -56,6 +58,7 @@ class Case extends React.Component{
 
                     <h1>iPod</h1>
 
+                    {/* For the wheel part */}
                     <Wheel 
                         theme={theme} 
                         active={active} 

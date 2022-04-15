@@ -1,17 +1,19 @@
+/* song container */
 #song-menu {
     width: 331px;
     height: 290px;
-    /* background-color: #E3F2FD; */
     background-color: white;
     overflow: visible;
 }   
 
+/* the heading part */
 #song-menu h2 
 {
     margin: 10px;
     font-size: 1.8rem;
 }
 
+/* List for song items */
 #song-menu ul li 
 {
     height: 28px;
@@ -21,6 +23,7 @@
     margin: 5px;
 }
 
+/* Active list item */
 #song-menu .active{
     background-color: rgb(55, 150, 220);
     color: white;

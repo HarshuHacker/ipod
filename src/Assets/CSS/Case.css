@@ -1,8 +1,10 @@
+/* For the outer case container */
 .case-container{
     height: 742px;
     width: 370px;
 }
 
+/* For the inner part */
 .case{
     height: 692px;
     width: 370px;

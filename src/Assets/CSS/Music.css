@@ -2,11 +2,11 @@
 .music{
     width: 331px;
     height: 290px;
-    /* background-color: #E3F2FD; */
     background-color: white;
     overflow: visible;
 }
 
+/* List for music items */
 .music ul{
     width: 100%;
     height: 220px;
@@ -16,6 +16,7 @@
     position: relative;
 }
 
+/* Active list item */
 .music .active{
     background-color: rgb(55, 150, 220);
     color: white;
@@ -23,6 +24,7 @@
     border-radius: 8px;
 }
 
+/* list item */
 .music li{
     height: 48px;
     padding-top: 19.5px;

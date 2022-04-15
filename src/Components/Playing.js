@@ -26,13 +26,17 @@ class Playing extends React.Component {
     // Render playing screen
     render() {
 
-        const { songItems, playing, songIndex, audio, songImgUrl, songComplete } = this.props;
+        const { songItems, songIndex, audio, songImgUrl, songComplete } = this.props;
+        // duration till which the song is played
         var currentTimeRender = Math.floor(this.state.currentTime / 60) + ":" + Math.floor(this.state.currentTime % 60);
+        // the duration of the complete song
         var durationRender = Math.floor(audio.duration / 60) + ":" + Math.floor(audio.duration % 60);
+        // percentage till which song is played
         const percentageComplete = { width: (this.state.currentTime / audio.duration * 100) + "%" };
         if(durationRender==="NaN:NaN"){
             durationRender="0:00";
         }
+        // if the song is completed
         if(currentTimeRender === durationRender)
         {
             songComplete()
