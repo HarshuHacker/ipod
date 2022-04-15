@@ -17,7 +17,7 @@ import Wallpaper from "./Wallpaper"
 
 class Display extends React.Component {
     render(){
-        const { active, currentMenu, menuItems, musicItems,songItems, playing, songIndex, audio, songUrl ,songImgUrl,wallpaper,wallpaperItems, noty, setNoty,notifyText} = this.props;
+        const { active, currentMenu, menuItems, musicItems,songItems, playing, songIndex, audio, songUrl ,songImgUrl,wallpaper,wallpaperItems, noty, setNoty,notifyText, songComplete} = this.props;
         return(
             <div style={{backgroundImage: `url(${wallpaperItems[wallpaper]})`}} className="display">
 
@@ -80,6 +80,7 @@ class Display extends React.Component {
                     playing={playing} 
                     songIndex={songIndex} 
                     songItems={songItems} 
+                    songComplete={songComplete}
                 />}
 
                 {currentMenu===8&&<Themes 

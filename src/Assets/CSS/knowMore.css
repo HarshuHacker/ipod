@@ -1,7 +1,7 @@
 /* information leaf on top left */
 
 .information-container{
-    position: fixed;
+    position: absolute;
     z-index: 2;
     transition: all 0.8s ease-in-out;
 }
@@ -10,7 +10,7 @@
     color: white;
     border: 5px solid black;
     border-radius: 20px;
-    line-height: 29px;
+    line-height: 25px;
     font-size: 15.5px;
     font-weight: 600;
     width: 350px;
@@ -18,16 +18,16 @@
     padding: 10px;
     transition: all 0.3s ease-in-out;
     overflow: scroll;
-    background-color: rgba(86, 50, 168, 0.9);
+    background-color: rgba(86, 50, 168, 0.95);
 }
 
 ul,ol{
     margin: 0;
 }
 
-li,h3
+.info-div li,.info-div h3
 {
-    margin: 5px;
+    margin: 15px;
 }
 
 ul

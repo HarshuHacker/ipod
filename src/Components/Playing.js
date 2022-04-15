@@ -22,15 +22,20 @@ class Playing extends React.Component {
     componentWillUnmount() {
         clearInterval(this.intervalId);
     }
+
     // Render playing screen
     render() {
 
-        const { songItems, playing, songIndex, audio, songImgUrl } = this.props;
+        const { songItems, playing, songIndex, audio, songImgUrl, songComplete } = this.props;
         var currentTimeRender = Math.floor(this.state.currentTime / 60) + ":" + Math.floor(this.state.currentTime % 60);
         var durationRender = Math.floor(audio.duration / 60) + ":" + Math.floor(audio.duration % 60);
         const percentageComplete = { width: (this.state.currentTime / audio.duration * 100) + "%" };
         if(durationRender==="NaN:NaN"){
             durationRender="0:00";
+        }
+        if(currentTimeRender === durationRender)
+        {
+            songComplete()
         }
         if(Math.floor(this.state.currentTime%60<10)){
             currentTimeRender = Math.floor(this.state.currentTime / 60) + ":0" + Math.floor(this.state.currentTime % 60);

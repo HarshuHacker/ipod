@@ -78,6 +78,31 @@ class App extends React.Component
     }
   }
 
+  songComplete=()=>
+  {
+    let songIndex = this.state.songIndex;
+    if (songIndex === this.state.songItemsUrl.length - 1) 
+    {
+      songIndex = 0;
+    } 
+    else 
+    {
+      songIndex++;
+    }
+    const songUrl = this.state.songItemsUrl[songIndex];
+    const songImgUrl = this.state.songImgItemsUrl[songIndex];
+    this.setState(
+    { 
+      songIndex: songIndex, 
+      songImgUrl: songImgUrl, 
+      songUrl: songUrl, 
+      audio: new Audio(songUrl) 
+    }, () => 
+    {
+      this.state.audio.play();
+    });
+  }
+
   seekSongForward=(e)=>
   {
     var command = true;
@@ -422,6 +447,7 @@ class App extends React.Component
           audio={audio} 
           songUrl={songUrl} 
           songImgUrl={songImgUrl} 
+          songComplete={this.songComplete}
           seekSongForward={this.seekSongForward} 
           seekSongReverse={this.seekSongReverse} 
           wheelColor={wheelColor} 

@@ -28,7 +28,8 @@ class Case extends React.Component{
             wallpaperItems, 
             noty, 
             setNoty, 
-            notifyText
+            notifyText,
+            songComplete
         } = this.props;
         return (
             <div className="case-container">
@@ -50,6 +51,7 @@ class Case extends React.Component{
                         noty={noty} 
                         setNoty={setNoty} 
                         notifyText ={notifyText}
+                        songComplete = {songComplete}
                         />
 
                     <h1>iPod</h1>

@@ -53,11 +53,11 @@ class knowMore extends React.Component
                         </li>
 
                         <li>
-                            Short pressing on forward/reverse will take you to next/previous track (ONLY WHILE PLAYING)
+                            Short pressing on forward/reverse will take you to next/previous track.
                         </li>
 
                         <li>
-                            Long pressing on forward/reverse will seek the song in forward/reverse (ONLY WHILE PLAYING)
+                            Long pressing on forward/reverse will seek the song in forward/reverse.
                         </li>
 
                         <li>
@@ -77,7 +77,7 @@ class knowMore extends React.Component
                     <ul type="none">
                         <li>
                             <b>Github-Link : </b> &nbsp;
-                            <a href="https://github.com/HarshuHacker" target={"_blank"}>
+                            <a href="https://ipod-nu.vercel.app" target={"_blank"}>
                                 iPod
                             </a> 
                         </li>
