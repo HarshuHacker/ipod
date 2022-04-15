@@ -83,7 +83,7 @@ class App extends React.Component
     let songIndex = this.state.songIndex;
     if (songIndex === this.state.songItemsUrl.length - 1) 
     {
-      songIndex = 0;
+      return
     } 
     else 
     {
