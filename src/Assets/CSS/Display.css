@@ -1,26 +1,28 @@
 .display
 {
-    /* background-image: url("../Images/BananzaThumb.jpg"); */
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    background-color: white;
     height: 330px;
     width: 330px;
     margin-top: 25px;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border: 5px solid black;
+    box-shadow: 0 0 7px 2px white;
+    position: relative;
 }
 
 .blank-div
 {
-    height: 330px;
-    width: 330px;
+    padding: 10px;
+    height: 270px;
+    width: 310px;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 

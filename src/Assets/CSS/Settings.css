@@ -1,6 +1,30 @@
 /* container */
 .settings{
-    width: 330px;
-    height: 300px;
-    background-color: #E3F2FD;
+    width: 331px;
+    height: 290px;
+    /* background-color: #E3F2FD; */
+    background-color: white;
+    overflow: visible;
+}
+
+.settings ul{
+    width: 100%;
+    height: 220px;
+    padding: 0px;
+    list-style: none;
+    overflow: scroll;
+    position: relative;
+}
+
+.settings .active{
+    background-color: rgb(55, 150, 220);
+    color: white;
+    font-weight: 900;
+    border-radius: 8px;
+}
+
+.settings li{
+    height: 48px;
+    padding-top: 19.5px;
+    font-size: 1.4rem;
 }

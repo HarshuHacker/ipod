@@ -32,7 +32,7 @@ class Case extends React.Component{
         } = this.props;
         return (
             <div className="case-container">
-                <div style={{backgroundColor:theme}} className="case">
+                <div style={{background:`url(${theme})`,backgroundRepeat: "no-repeat", backgroundSize: "cover"}} className="case">
 
                     <Display 
                         songIndex={songIndex} 
@@ -70,18 +70,6 @@ class Case extends React.Component{
                 </div>
             </div>
         )
-
-
-
-        // return(
-        //     <div className="case-container">
-        //         <div className="case">
-        //             <Display/>
-        //             <h1>iPod</h1>
-        //             <Wheel/>
-        //         </div>
-        //     </div>
-        // )
     }
 }
 

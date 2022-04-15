@@ -33,7 +33,6 @@
 
 /* playing or not */
 .status{
-    /* margin-top: 20px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +43,7 @@
 #currentTimeRender
 {
     padding-left: 8px;
-    width: 50px;
+    width: 60px;
 }
 
 /* progress of song duration */
@@ -54,20 +53,21 @@
     margin: 0px 8px;
     background-color: gray;
     border-radius: 5px;
+    position: relative;
 }
 
 #durationRender
 {
     padding-right: 8px;
-    width: 50px;
+    width: 60px;
 }
 
-/* progress bar filled */ß
+/* progress bar filled */
 #progress-bar{
-    height: 5px;
     background-color: #039BE5;
-    position: relative;
     border-radius: 500px;
+    position: relative;
+    height: 5px;
 }
 
 #progress-circle{

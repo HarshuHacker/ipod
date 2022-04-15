@@ -4,51 +4,47 @@
 }
 
 /* Menu options */
-.menu{
-    background-color: #E3F2FD;
-    height: 300px;
-    width: 165px;
+.main-menu{
+    background-color: white;
+    height: 290px;
+    width: 163px;
 }
 
 /* container for Leaf images in menu */
 .leaf{
-    border-left: 1px solid black;
-    background-color: #E3F2FD;
-    height: 300px;
-    width: 165px;
-}
-
-/* Heading of menu */
-h3{
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
+    border-left: 4px solid black;
+    /* background-color: #E3F2FD; */
+    background-color: white;
+    height: 290px;
+    width: 163px;
 }
 
 /* List for menu items */
-ul{
-    width: 100%;
+.main-menu ul{
+    height: 290px;
     padding: 0px;
-    list-style: none;
 }
 
+
 /* list item */
-li{
-    height: 49.5px;
+.main-menu li{
+    height: 46.5px;
     padding-top: 19.5px;
     font-size: 1.4rem;
 }
 
 /* Active list item */
-.active{
-    position: relative;
+.main-menu .active{
     background-color: rgb(55, 150, 220);
     color: white;
     font-weight: 900;
+    border-radius: 8px;
 }
 
 /* Leaf image */
 .leaf-img{
-    height: 300px;
-    width: 165px;
+    height: 280px;
+    width: 155px;
+    border: 5px solid white;
+    border-radius: 20px;
 }

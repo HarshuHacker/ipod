@@ -11,29 +11,38 @@ class Wheel extends React.Component {
     render()
     {
         const { changeMenuForward, active, currentMenu, theme, wheelColor } = this.props;
+        let buttonColor = "black";
+        if(wheelColor === "black" || wheelColor === "orange")
+        {
+            buttonColor= "white"
+        }
+        else
+        {
+            buttonColor= "black"
+        }
         return(
             <div className="wheel-container" id="wheel-container">
                 <div style={{backgroundColor:wheelColor}} className="wheel" id="wheel">
 
                     <div className="controls" id="menu-button">
-                        <i className="fa-solid fa-bars"></i>
+                        <i className="fa-solid fa-bars" style={{color:buttonColor}} ></i>
                     </div>
 
                     <div className="controls" id="forward-button">
-                        <i className="fa-solid fa-forward"></i>
+                        <i className="fa-solid fa-forward" style={{color:buttonColor}}></i>
                     </div>
 
                     <div className="controls" id="backward-button">
-                        <i className="fa-solid fa-backward"></i>
+                        <i className="fa-solid fa-backward" style={{color:buttonColor}}></i>
                     </div>
 
                     <div className="controls" id="play-pause-button">
-                        <i className="fa-solid fa-play"></i>
-                        <i className="fa-solid fa-pause"></i>
+                        <i className="fa-solid fa-play" style={{color:buttonColor}}></i>
+                        <i className="fa-solid fa-pause" style={{color:buttonColor}}></i>
                     </div>
 
                 </div>
-                <div id="select-button" style={{backgroundColor:theme}} className="blank" onClick={() => { changeMenuForward(active, currentMenu) }}></div>
+                <div id="select-button" style={{background:`url(${theme})`}} className="blank" onClick={() => { changeMenuForward(active, currentMenu) }}></div>
             </div>
         )
     }

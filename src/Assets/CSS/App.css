@@ -42,25 +42,3 @@
     transform: rotate(360deg);
   }
 }
-
-.lock-display{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.3;
-  width: 330px;
-  height: 240px;
-  background-color: white;
-  font-size: 100px;
-}
-
-/* Bottom div  lockscreen */
-.bottom-div-lock{
-  width: 330px;
-  height: 60px;
-  background-color: #E3F2FD;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-}

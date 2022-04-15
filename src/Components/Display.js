@@ -1,5 +1,8 @@
 import React from "react";
 import "../Assets/CSS/Display.css"
+import game from "../Assets/Images/blankOptions/Games.png"
+import artists from "../Assets/Images/blankOptions/Artists.png"
+import albums from "../Assets/Images/blankOptions/Albums.png"
 
 import Navbar from "./Navbar";
 import Menu from "./Menu";
@@ -39,9 +42,12 @@ class Display extends React.Component {
                 />}
 
                 {currentMenu === 2 && <div className="blank-div">
-                    <h1 className="empty-text">
+                    <h1 className="empty-text" style={{marginTop: "0px", marginBottom: "10px"}}>
                         Games
                     </h1>
+                    <img src={game} height= "210px" width="200px"></img>
+                    
+
                 </div>}
 
                 {currentMenu === 3 && <Settings 
@@ -54,15 +60,17 @@ class Display extends React.Component {
                 />}
 
                 {currentMenu === 5 && <div className="blank-div">
-                    <h1 className="empty-text">
+                    <h1 className="empty-text" style={{marginTop: "0px", marginBottom: "10px"}}>
                         Artists
                     </h1>
+                    <img src={artists} height= "210px" width="200px"></img>
                 </div>}
 
                 {currentMenu === 6 && <div className="blank-div">
-                    <h1 className="empty-text">
+                    <h1 className="empty-text" style={{marginTop: "0px", marginBottom: "10px"}}>
                         Albums
                     </h1>
+                    <img src={albums} height= "210px" width="200px"></img>
                 </div>}
 
                 {(currentMenu === 0 ||currentMenu===7) && <Playing 

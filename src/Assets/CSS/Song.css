@@ -1,0 +1,28 @@
+#song-menu {
+    width: 331px;
+    height: 290px;
+    /* background-color: #E3F2FD; */
+    background-color: white;
+    overflow: visible;
+}   
+
+#song-menu h2 
+{
+    margin: 10px;
+    font-size: 1.8rem;
+}
+
+#song-menu ul li 
+{
+    height: 28px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 1.3rem;
+}
+
+#song-menu .active{
+    background-color: rgb(55, 150, 220);
+    color: white;
+    font-weight: 900;
+    border-radius: 8px;
+}

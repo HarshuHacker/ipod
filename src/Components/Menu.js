@@ -1,8 +1,8 @@
 import React from 'react';
 import "../Assets/CSS/Menu.css"
-import game from "../Assets/Images/game.webp"
-import music from "../Assets/Images/music.jpeg"
-import settings from "../Assets/Images/setting.png"
+import game from "../Assets/Images/menuItemsWallpaper/game.webp"
+import music from "../Assets/Images/menuItemsWallpaper/music.jpeg"
+import settings from "../Assets/Images/menuItemsWallpaper/setting.png"
 
 // Renders main menu
 class Menu extends React.Component {
@@ -11,7 +11,7 @@ class Menu extends React.Component {
         return (
 
             <div className="menu-container">
-                <div className="menu">
+                <div className="main-menu">
                     <ul>
                         {menuItems.map((element, index)=>{
                             return active===index?<li key={index} className="active">{element}</li>:<li key={index}>{element}</li>

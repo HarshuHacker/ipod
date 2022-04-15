@@ -6,11 +6,14 @@ class Themes extends React.Component {
     render() {
         const {active} = this.props;
         return (
-            <div className="music">
+            <div className="theme">
                 <h2>Theme Select</h2>
                 <ul>
-                    {["Rose Gold","Space Gray","Gold","Light Purple","Black"].map((element,index)=>{
-                        return active===index?<li key={index} className="active theme-li">{element}</li>:<li className="theme-li" key={index}>{element} </li>
+                    {["Blue","Green","Rose Gold","Space Gray"].map((element,index)=>
+                    {
+                        return active===index?
+                        <li key={index} className="active theme-li">{element}</li>:
+                        <li className="theme-li" key={index}>{element} </li>
                     })}
                 </ul>
             </div>

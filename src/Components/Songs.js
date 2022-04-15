@@ -1,11 +1,12 @@
 import React from 'react';
+import "../Assets/CSS/Song.css"
 
 // Renders songs menu
 class Songs extends React.Component {
     render() {
         const {songItems,active} = this.props;
         return (
-            <div className="music">
+            <div id='song-menu'>
                 <h2>Songs</h2>
                 <ul>
                 {songItems.map((element, index)=>

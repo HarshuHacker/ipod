@@ -1,4 +1,5 @@
 import React from 'react';
+import "../Assets/CSS/lockScreen.css"
 
 // Renderse lockscreen
 class LockScreen extends React.Component {
@@ -9,7 +10,7 @@ class LockScreen extends React.Component {
                     <i className="fa fa-lock" aria-hidden="true"></i>
                 </div>
                 <div className="bottom-div-lock">
-                    <h3>Press Centre Button to unlock!</h3>
+                    <h3>Press Centre Button To Unlock !!</h3>
                 </div>
             </div>
         )

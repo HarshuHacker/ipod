@@ -24,6 +24,7 @@ class Playing extends React.Component {
     }
     // Render playing screen
     render() {
+
         const { songItems, playing, songIndex, audio, songImgUrl } = this.props;
         var currentTimeRender = Math.floor(this.state.currentTime / 60) + ":" + Math.floor(this.state.currentTime % 60);
         var durationRender = Math.floor(audio.duration / 60) + ":" + Math.floor(audio.duration % 60);
@@ -40,8 +41,6 @@ class Playing extends React.Component {
                     <img src={songImgUrl} alt="songImg"></img>
                     <div>
                         <h1>{songItems[songIndex]}</h1>
-                        {/* {playing && <h5 className="play-pause-nav">Playing</h5>}
-                        {!playing && <h5 className="play-pause-nav">Paused</h5>} */}
                     </div>
                 </div>
                 <div className="status">

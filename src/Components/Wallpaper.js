@@ -8,7 +8,7 @@ class Wallpaper extends React.Component {
             <div className="music">
                 <h2>Wallpaper Select</h2>
                 <ul>
-                    {["Earth","Jupiter","Moon"].map((element,index)=>{
+                    {["Flower","Sea Side","Space"].map((element,index)=>{
                         return active===index?<li key={index} className="active theme-li">{element}</li>:<li className="theme-li" key={index}>{element} </li>
                     })}
                 </ul>

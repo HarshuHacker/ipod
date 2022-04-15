@@ -1,6 +1,5 @@
 import React from 'react';
 import "../Assets/CSS/Navbar.css"
-import BatImg from "../Assets/Images/battery.png"
 
 // Renders navbar
 class Navbar extends React.Component {
@@ -69,7 +68,7 @@ class Navbar extends React.Component {
                 
                 {<div className="right-container-nav">
                     {playing ? <h5 className="play-pause-nav"><i className="fas fa-play"></i></h5> : <h5 className="play-pause-nav"><i className="fas fa-pause"></i> </h5>}
-                    <img className="battery" src={BatImg} alt="Battery" />
+                    <i className="battery fa-solid fa-battery-three-quarters" alt="Battery"></i>
                 </div>}
             </div>
         )

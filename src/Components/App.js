@@ -9,24 +9,28 @@ import Case from "./Case"
 import song1 from "../Assets/Songs/Bananza.mp3"
 import song2 from "../Assets/Songs/MainShairToNahi.mp3"
 import song3 from "../Assets/Songs/MeraYaar.mp3"
-import song4 from "../Assets/Songs/OyeOye.mp3"
+import song4 from "../Assets/Songs/Sulthan.mp3"
 import song5 from "../Assets/Songs/RaitZaraSi.mp3"
 import song6 from "../Assets/Songs/Ranjha.mp3"
 
 
-import song1Img from "../Assets/Images/BananzaThumb.jpg"
-import song2Img from "../Assets/Images/BobbyThumb.jpeg"
-import song3Img from "../Assets/Images/MeraYaarThumb.jpeg"
-import song4Img from "../Assets/Images/OyeOyeThumb.jpeg"
-import song5Img from "../Assets/Images/RaitZaraSiThumb.jpeg"
-import song6Img from "../Assets/Images/RanjhaThumb.jpeg"
+import song1Img from "../Assets/Images/songImages/BananzaThumb.jpg"
+import song2Img from "../Assets/Images/songImages/BobbyThumb.jpeg"
+import song3Img from "../Assets/Images/songImages/MeraYaarThumb.jpeg"
+import song4Img from "../Assets/Images/songImages/sulthanThumb.jpeg"
+import song5Img from "../Assets/Images/songImages/RaitZaraSiThumb.jpeg"
+import song6Img from "../Assets/Images/songImages/RanjhaThumb.jpeg"
 
 
-import blueBg from "../Assets/Images/blueBG.jpeg"
-import SpaceGrayBG from "../Assets/Images/SpaceGrayBG.jpeg"
-import roseGoldBG from "../Assets/Images/roseGoldBG.jpeg"
-import greenBG from "../Assets/Images/greenBG.jpeg"
-import pinkBg from "../Assets/Images/pinkBG.jpeg"
+import flowerWallpaper from "../Assets/Images/Wallpapers/flowerWallpaper.webp"
+import seaSideWallpaper from "../Assets/Images/Wallpapers/seaSideWallpaper.jpeg"
+import spaceWallpaper from "../Assets/Images/Wallpapers/spaceWallpaper.webp"
+
+
+import blueBg from "../Assets/Images/Theme/blueBG.jpeg"
+import SpaceGrayBG from "../Assets/Images/Theme/SpaceGrayBG.jpeg"
+import roseGoldBG from "../Assets/Images/Theme/roseGoldBG.jpeg"
+import greenBG from "../Assets/Images/Theme/greenBG.jpeg"
 
 
 
@@ -41,7 +45,7 @@ class App extends React.Component
       musicItems: ["All Songs", "Artists", "Albums"],
       songItemsUrl: [song1, song2, song3, song4, song5, song6],
       songImgItemsUrl: [song1Img, song2Img, song3Img, song4Img, song5Img, song6Img],
-      songItems: ["Bananza", "Main Shair To Nahi", "Mera Yaar", "Oye Oye", "Rait Zara Si", "Ranjha"],
+      songItems: ["Bananza", "Main Shair To Nahi", "Mera Yaar", "Sulthan", "Rait Zara Si", "Ranjha"],
       songIndex: 0,
       // -2 : LockScreen
       // -1: Main Menu
@@ -56,15 +60,16 @@ class App extends React.Component
       // 8 : Themes
       // 9 : Wheel Colour
       // 10 : WallPaper
-      lengthMenuKey: {"-1":3,1:2,3:2,4:5,8:4,9:3,10:2},
+      lengthMenuKey: {"-1":3,1:2,3:2,4:5,8:3,9:3,10:2},
       menuMapping: {"-1":[0,1,2,3], 1:[4,5,6], 3:[8,9,10]},
       currentMenu: -2,
       navigationStack: [],
       songUrl: song1,
       playing: false,
-      theme: [blueBg, SpaceGrayBG, roseGoldBG, greenBG, pinkBg],
-      wallpaperItems: [song1Img, song2Img, song3Img],
-      wallpaper: 0,
+      theme: blueBg,
+      themeOptions: [blueBg, greenBG ,roseGoldBG ,SpaceGrayBG],
+      wallpaperItems: [flowerWallpaper, seaSideWallpaper, spaceWallpaper],
+      wallpaper: 2,
       audio: new Audio(song1),
       songImgUrl: song1Img,
       wheelColor: "white",
@@ -75,13 +80,18 @@ class App extends React.Component
 
   seekSongForward=(e)=>
   {
+    var command = true;
     if(this.state.currentMenu === -2)
     {
       return
     }
-    if(this.state.playing === false)
+    if(this.state.playing === false && (this.state.currentMenu !== 7 && this.state.currentMenu !== 0))
     {
       return
+    }
+    if (this.state.playing === false && (this.state.currentMenu === 7 || this.state.currentMenu === 0)) 
+    {
+      command = false
     }
     if(e.detail.interval < 250)
     {
@@ -104,7 +114,9 @@ class App extends React.Component
         songUrl: songUrl, 
         audio: new Audio(songUrl) 
       }, () => {
-        this.state.audio.play();
+        if(command){
+          this.state.audio.play();
+        }
       });
     }
     else if (e.detail.interval > 250 && e.detail.interval < 10000) 
@@ -120,13 +132,18 @@ class App extends React.Component
 
   seekSongReverse=(e)=>
   {
+    var command = true;
     if (this.state.currentMenu === -2) 
     {
       return;
     }
-    if (this.state.playing === false) 
+    if (this.state.playing === false && (this.state.currentMenu !== 7 && this.state.currentMenu !== 0)) 
     {
       return;
+    }
+    if (this.state.playing === false && (this.state.currentMenu === 7 || this.state.currentMenu === 0)) 
+    {
+      command = false
     }
     if (e.detail.interval < 250) 
     {
@@ -149,7 +166,9 @@ class App extends React.Component
         songUrl: songUrl, 
         audio: new Audio(songUrl) 
       }, () => {
-        this.state.audio.play();
+        if(command){
+          this.state.audio.play();
+        }
       });
     } 
     else if (e.detail.interval > 250 && e.detail.interval < 10000) 
@@ -224,19 +243,20 @@ class App extends React.Component
 
   // FUNCTION FOR : CHANGE THE THEME OF iPod BODY
   setTheme = (id) => {
-    let theme ="";
+    let theme = "";
     if (id === 0) {
-      theme= this.state.theme[0];
+      theme= this.state.themeOptions[0];
     }
-    else if (id === 1) {
-      theme= this.state.theme[1]
-    } else if (id === 2) {
-      theme= this.state.theme[2];
-    } else if (id === 3) {
-      theme=this.state.theme[3];
+    else if (id === 1) 
+    {
+      theme= this.state.themeOptions[1]
+    } else if (id === 2) 
+    {
+      theme= this.state.themeOptions[2];
+    } else if (id === 3) 
+    {
+      theme=this.state.themeOptions[3];
       
-    } else if (id === 4) {
-      theme=this.state.theme[4]
     }
     this.setState({ 
       theme:theme , 
@@ -250,14 +270,14 @@ class App extends React.Component
   setWheelColor = (id) => {
     let wheelColor ="";
     if (id === 0) {
-      wheelColor= "#212121";
+      wheelColor= "white";
     }
     else if (id === 1) {
-      wheelColor= "white";
+      wheelColor= "black";
     } else if (id === 2) {
-      wheelColor = "#3E2723";
+      wheelColor = "yellow";
     } else if (id === 3) {
-      wheelColor= "#3D5AFE";
+      wheelColor= "orange";
     }
     this.setState({ 
       wheelColor: wheelColor, 
