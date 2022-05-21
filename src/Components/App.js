@@ -6,20 +6,20 @@ import KnowMore from "./knowMore";
 import Case from "./Case"
 
 // importing the songs
-import song1 from "../Assets/Songs/Bananza.mp3"
-import song2 from "../Assets/Songs/MainShairToNahi.mp3"
-import song3 from "../Assets/Songs/MeraYaar.mp3"
-import song4 from "../Assets/Songs/Sulthan.mp3"
-import song5 from "../Assets/Songs/RaitZaraSi.mp3"
-import song6 from "../Assets/Songs/Ranjha.mp3"
+import song1 from "../Assets/Songs/MeraYaar.mp3"
+import song2 from "../Assets/Songs/Pasoori.mp3"
+import song3 from "../Assets/Songs/RaitZaraSi.mp3"
+import song4 from "../Assets/Songs/Ranjha.mp3"
+import song5 from "../Assets/Songs/ThatThat.mp3"
+import song6 from "../Assets/Songs/Unstoppable.mp3"
 
 // importing the song images
-import song1Img from "../Assets/Images/songImages/BananzaThumb.jpg"
-import song2Img from "../Assets/Images/songImages/BobbyThumb.jpeg"
-import song3Img from "../Assets/Images/songImages/MeraYaarThumb.jpeg"
-import song4Img from "../Assets/Images/songImages/sulthanThumb.jpeg"
-import song5Img from "../Assets/Images/songImages/RaitZaraSiThumb.jpeg"
-import song6Img from "../Assets/Images/songImages/RanjhaThumb.jpeg"
+import song1Img from "../Assets/Images/songImages/MeraYaarThumb.jpeg"
+import song2Img from "../Assets/Images/songImages/PasooriThumb.jpeg"
+import song3Img from "../Assets/Images/songImages/RaitZaraSiThumb.jpeg"
+import song4Img from "../Assets/Images/songImages/RanjhaThumb.jpeg"
+import song5Img from "../Assets/Images/songImages/ThatThatThumb.jpeg"
+import song6Img from "../Assets/Images/songImages/UnstoppableThumb.jpeg"
 
 // importing the wallpapers
 import flowerWallpaper from "../Assets/Images/Wallpapers/flowerWallpaper.webp"
@@ -51,7 +51,7 @@ class App extends React.Component
       //song images list
       songImgItemsUrl: [song1Img, song2Img, song3Img, song4Img, song5Img, song6Img],
       //song names
-      songItems: ["Bananza", "Main Shair To Nahi", "Mera Yaar", "Sulthan", "Rait Zara Si", "Ranjha"],
+      songItems: ["Mera Yaar", "Pasoori", "Rait Zara Si", "Ranjha", "That That", "Unstoppable"],
       //current song
       songIndex: 0,
 
