@@ -61,24 +61,28 @@ class Wheel extends React.Component {
         {
             this.angle = e.detail.angle;
         }
-        if (Math.abs(this.angle - e.detail.angle) > 300) 
-        {
-            this.angle = Math.abs(e.detail.angle);
-            if (e.detail.distanceFromLast === 0) 
-            {
-                return;
-            }
-            else if (e.detail.distanceFromLast < 0) 
-            {
-                updateActiveMenu(1, currentMenu);
-            } 
-            else 
-            {
-                updateActiveMenu(0, currentMenu);
-            }
 
-        } 
-        else if (Math.abs(this.angle - e.detail.angle) > 15) 
+        // Don't Know Why This If Has Been Used
+
+        // if (Math.abs(this.angle - e.detail.angle) > 300) 
+        // {
+        //     this.angle = Math.abs(e.detail.angle);
+        //     if (e.detail.distanceFromLast === 0) 
+        //     {
+        //         return;
+        //     }
+        //     else if (e.detail.distanceFromLast < 0) 
+        //     {
+        //         updateActiveMenu(1, currentMenu);
+        //     } 
+        //     else 
+        //     {
+        //         updateActiveMenu(0, currentMenu);
+        //     }
+
+        // } 
+        // else 
+        if (Math.abs(this.angle - e.detail.angle) > 15) 
         {
             this.angle = Math.abs(e.detail.angle);
             if (e.detail.distanceFromLast === 0) 
